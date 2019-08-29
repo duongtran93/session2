@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <script>
+        function conv() {
+            let amount = document.getElementById("amount").value;
+            let fromcur = document.getElementById("fromcurrency").value;
+            let tocur = document.getElementById("tocurrency").value;
+            let rs = (amount/tocur)*fromcur;
+            document.getElementById("result").innerText="Result: "+ rs;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="amount"></td>
+                <td>
+                    <select style="width: 120px;" id="fromcurrency">
+                        <option value="23000">USD</option>
+                        <option value="1">VND</option>
+                        <option value="26000">EUR</option>
+                        <option value="760">THB</option>
+                        <option value="3">LAK</option>
+                        <option value="6">KHR</option>
+                        <option value="5500">MYR</option>
+                        <option value="2">IDR</option>
+                        <option value="350">RUB</option>
+                        <option value="20">KRW</option>
+                    </select>
+                </td>
+                <td>
+                    <select style="width: 100px;" id="tocurrency">
+                        <option value="23000">USD</option>
+                        <option value="1">VND</option>
+                        <option value="26000">EUR</option>
+                        <option value="760">THB</option>
+                        <option value="3">LAK</option>
+                        <option value="6">KHR</option>
+                        <option value="5500">MYR</option>
+                        <option value="2">IDR</option>
+                        <option value="350">RUB</option>
+                        <option value="20">KRW</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="conv()">Convert</button> </td>
+            </tr>
+        </table>
+    </form><br>
+    <div id="result"></div>
+</body>
+</html>
