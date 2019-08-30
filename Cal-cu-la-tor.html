@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Add() {
+            let a = parseInt(document.getElementById('ip1').value);
+            let b = parseInt(document.getElementById('ip2').value);
+            result = a + b;
+            document.getElementById('result').innerText = ("Result Addition: "+ result);
+        }
+        function Sub() {
+            let x = parseInt(document.getElementById('ip1').value);
+            let y = parseInt(document.getElementById('ip2').value);
+            result2 = x - y;
+            document.getElementById('result').innerText = ("Result Subtraction: "+ result2);
+        }
+        function Mul() {
+            let m = parseInt(document.getElementById('ip1').value);
+            let n = parseInt(document.getElementById('ip2').value);
+            result3 = m * n;
+            document.getElementById('result').innerText = ("Result Multiplication: "+ result3);
+        }
+        function Div() {
+            let e = parseInt(document.getElementById('ip1').value);
+            let f = parseInt(document.getElementById('ip2').value);
+            result4 = e / f;
+            document.getElementById('result').innerText = ("Result Division: "+ result4);
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <input type="text" id="ip1">
+    <input type="text" id="ip2"><br><br>
+    <button type="button" onclick="Add()">Addition(+)</button>
+    <button type="button" onclick="Sub()">Subtraction(-)</button>
+    <button type="button" onclick="Mul()">Multiplication(X)</button>
+    <button type="button" onclick="Div()">Division(/)</button><br><br>
+    <div id="result"></div>
+</body>
+</html>
